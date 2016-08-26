@@ -1,0 +1,247 @@
+{
+	
+	"personalInfo" : {
+		"fullname" : "Ankur rana",
+		"firstname" : "Ankur",
+		"lastname" : "Rana",
+		"username" : "princeLegolas"
+	},
+	"pages" : {
+		"Personal" : {
+			"label" : "Personal Information",
+			"controls" : {
+				"info" : {
+					"type" : "keyValueList",
+					"items" : [
+						{
+							"key" : "Name",
+							"value" : "Ankur rana"
+						},
+						{
+							"key" : "Email",
+							"value" : "ankurofficial@hotmail.com"
+						},
+						{
+							"key" : "Website",
+							"value" : "<a href=\"http://developer.awesomeankur.com\">developer.awesomeankur.com</a>"
+						},
+						{
+							"key" : "Github",
+							"value" : "<a href=\"https://github.com/Ankurrana\">github.com/Ankurrana</a>"
+						},
+						{
+							"key" : "LinkedIn",
+							"value" : "<a href=\"http://www.linkedin.com/in/ankurrana1993\">linkedin.com/in/ankurrana1993</a>"
+						},
+						{
+							"key" : "Address",
+							"value" : "140 - D<br>J & K Pocket <br> Dilshad Garden<br>Delhi - 110095 <br>"	
+						},
+						{
+							"key" : "Contact",
+							"value" : "9818012290"
+						},
+						{
+							"key" : "Download CV",
+							"value" : "<a href=\"\/resume\">CV</a>"
+
+						}
+					]
+				}
+			}	
+		},
+		"Experience" : {
+			"label" : "Experience",
+			"controls" : {
+				"kronosHeading" : {
+					"type" : "minorHeading",
+					"value" : "<div align=\"left\">Kronos Incorporated</div><small><div align=\"right\"><i>June 2015 - Present</i></small></div>"
+				},
+				"designation" : {
+					"type" : "html",
+					"html" : "</p>Software Engineer</p>"
+				},
+				"Jobdesc" : {
+					"type" : "html",
+					"html" : "<p>I am working on one of the Primary software of Kronos named HRMS (Human Resource Management System). My Responsibilities mainly include adding new features to the System. This includes understanding the business requirement in depth, have discussions with the Product Manger to work out nitty-gritties of the feature.<p></p>It required me to study System flow, Data flow and Work Processes of the Software and finally transform all the information to Code.I make sure to use the best software practices into the code, improve software performance wherever possible while making sure to minimise regressions.<p></p>I keep myself updated with the state of the art development technologies and often share my knowledge across my team through technical sessions.I have conducted several sessions on various topics including JavaScript 2016 , NodeJS and Git/Github. I have also attended several on many different technologies including Angular, TypeScript, Cloud Computing and many others related to the Company Software.Its one of the best things about kronos that we hold regular technical training sessions which help us to keep ourselves updated to the new Technologies even though we might not be using them in day today life.  </p>"
+				}
+			} 
+		}, 
+		"Educational" : {
+			"label" : "Education",
+			"description" : "<h3>JSS</h3>",
+			"controls" : {
+				"btech" : {
+					"type" : "minorHeading",
+					"value" : "B.Tech - JSS Academy of Technical Education"
+				},
+				"btechInfoList" : {
+					"type" : "keyValueList",
+					"items" : [
+						{
+							"key" : "<b>Course</b>",
+							"value" : "Computer Science and Engineering"
+						},
+						{
+							"key" : "<b>Period</b>",
+							"value" : "May 2011 - June 2015"
+						},
+						{
+							"key" : "<b>Major Subjects</b>",
+							"value" : "Design and Analysis of Algorithm<br>Networks<br>Data Structure<br>"
+						}
+					]
+ 				},
+ 				"12th" : {
+					"type" : "minorHeading",
+					"value" : "Higher Secondary School"
+				},
+				"12thList" : {
+					"type" : "keyValueList",
+					"items" : [
+						{
+							"key" : "<b>School</b>",
+							"value" : "GreenFields Public School"
+						},
+						{
+							"key" : "<b>Period</b>",
+							"value" : "April 2010 - April 2011"
+						}
+					]
+ 				},
+ 				"10th" : {
+					"type" : "minorHeading",
+					"value" : "Senior Secondary School"
+				},
+				"10thList" : {
+					"type" : "keyValueList",
+					"items" : [
+						{
+							"key" : "<b>School</b>",
+							"value" : "GreenFields Public School"
+						},
+						{
+							"key" : "<b>Period</b>",
+							"value" : "April 2009 - April 2010"
+						}
+					]
+ 				}
+			}
+		},
+		"Skills" : {
+			"label" : "Skills",
+			"description" : "<ul><li>C++</li><li>Javascript</li><li>Java</li><li>Php</li></ul>",
+			"controls" : {
+				"skillsList" : {
+					"type" : "keyValueList",
+					"items" : [
+						{
+							"key" : "<b>Languages</b>",
+							"value" : "C, C++(Expert), Java(Prior Experience), JavaScript(Prior Experience) , Php(Prior Experience), C#, Visual Basic, SQL"
+						},
+						{
+							"key" : "<b>Technologies </b>",
+							"value" : "Git(proficient), Laravel , Codeignitor, HTML5, CSS3, Twitter Bootstrap,AJAX,NodeJS, Express Framework. MEAN Stack, ASP.net, Accurev"
+						},
+						{
+							"key" : "<b>Databases</b>",
+							"value" : "MS SQL Server(proficient), MongoDB(proficient)"
+						},
+						{
+							"key" : "<b>Operating System</b>",
+							"value" : "Linux (Ubuntu)"
+						},
+						{
+							"key" : "<b>Scripting</b>",
+							"value" : "Linux bash script(proficient)"
+						}
+
+					]
+				}
+			}
+		},
+		"Achievements" : {
+			"label" : "Acheivements",
+			"controls" : {
+				"achievementList" : {
+					"type" : "list",
+					"listitems" : [
+						"Won an online algorithmic event \"Algothematics\" in annual Techno-cultural contest of JSS, Noida Zealicon 2014 and 2015",
+						"Won onsite Linux shell scripting contest \"Crack the Shell\" in annual technical contest of JSS, Noida ,Zealicon 2014",
+						"Won onsite programming contest CodeWars in zealicon 2015 hosted on Codechef",
+						"Secured 2nd Position in Segfault Event of IIIT Delhi Tech Fest Esya on 23rd Aug 2014",
+						"Secured rank 80 out of 700 participants in IIIT Delhi Programming Contest Procon on 10th Aug 2014",
+						"Qualified 1st round of ACM ICPC Dec '13. Could not attend second round due to semester exams",
+						"Attended ACM ICPC Asia region Gwalior site 2014 on 20-21st December 2014",
+						"Secured top most rank of 270 in Codechef monthly short programming contest (COOK48 ) in July '14",
+						"Secured top most Rank of 213 in Codechef long contest MAY CHALLENGE 2014"
+					]
+				}
+			}
+		},
+		"Projects" : {
+			"label" : "Projects",
+			"controls" : {
+				"dragonFly" : {
+					"type" : "minorHeading",
+					"value" : "DRAGONFLY (January 2016 - Present)"
+				},
+				"dragonflyList" : {
+					"type" : "list",
+					"listitems" : ["Comprehensive Todo and Scheduling System","Service based on REST","Uses NodeJS , MongoDB, Express Technology Stack"]
+				},
+				"jssinfo" : {
+					"type" : "minorHeading",
+					"value" : "JSS INFOCENTER (Second Year Feb 2013)"
+				},
+				"jssInfoList" : {
+					"type" : "list",
+					"listitems" : ["A web based project made with CodeIgnitor ,A php Framework","An Information system to facilitate communication between students and faculty of JSS","Uses NodeJS , Improved version of the current Information System in our college"]
+				},
+				"gun" : {
+					"type" : "minorHeading",
+					"value" : "GUN ( Third Year - May 2014 )"
+				},
+				"gunList" : {
+					"type" : "list",
+					"listitems" : ["A small scripting meant for uploading my coding problem solutions on Github"]
+				},
+				"snakemaster" : {
+					"type" : "minorHeading",
+					"value" : "SNAKEMASTER (Second Year - March 2013)"
+				},
+				"snakeMasterList" : {
+					"type" : "list",
+					"listitems" : ["An HTML5 game made with Javascript","An Imitation of the traditional snake game"]
+				},
+				"Vevlo" : {
+					"type" : "minorHeading",
+					"value" : "VEVLO (January 2016 - March 2016)"
+				},
+				"vevloList" : {
+					"type" : "list",
+					"listitems" : ["A Small Web Application which reads and publishes Video files on my Computer on localhost so that I can view them on all devices without requiring me to explicitly share them across Network","Service based on REST","Uses NodeJS, Express and AngularJS"]
+				}
+			}
+		},
+		"Interests" : {
+			"label" : "Interests",
+			"controls" : {
+				"interests" : {
+					"type" : "list",
+					"listitems" : [
+						"Competitive Programming",
+						"Learning Algorithms",
+						"Won onsite programming contest CodeWars in zealicon 2015 hosted on Codechef",
+						"Problem Solving",
+						"C/C++ Programming Language",
+						"Learning New Technologies/Languages",
+						"Developing useful stuff for fun"
+						
+					]
+				}
+			}
+		}
+	}
+
+}
