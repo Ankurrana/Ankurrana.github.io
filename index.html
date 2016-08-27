@@ -1,5 +1,4 @@
-
-<!DOCTYPE html><html lang="en" ng-app="portfolio" ng-controller="mainController"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"><head><title>Ankur rana| Developer</title><link rel="stylesheet" type="text/css" href="/public/node_modules/bootstrap/dist/css/bootstrap.css"><link rel="stylesheet" type="text/css" href="/public/node_modules/hover.css/css/hover-min.css"><script src="public/node_modules/jquery/dist/jquery.min.js"></script><script src="public/node_modules/bootstrap/dist/js/bootstrap.min.js"></script><script src="public/node_modules/angular/angular.min.js"></script><script src="public/node_modules/angular-sanitize/angular-sanitize.js"></script></head></html><style>
+<!DOCTYPE html><html lang="en" ng-app="portfolio" ng-controller="mainController"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"><head><title>Ankur rana| Developer</title><link rel="stylesheet" type="text/css" href="./node_modules/bootstrap/dist/css/bootstrap.css"><link rel="stylesheet" type="text/css" href="./node_modules/hover.css/css/hover-min.css"><script src="./node_modules/jquery/dist/jquery.min.js"></script><script src="./node_modules/bootstrap/dist/js/bootstrap.min.js"></script><script src="./node_modules/angular/angular.min.js"></script><script src="./node_modules/angular-sanitize/angular-sanitize.js"></script></head></html><style>
 	:root{
 		--main-bg-color : #59FFA0;
 		--main-heading-color:#9F96EA;
@@ -140,7 +139,7 @@
 					that.html += k.html
 					break;
 				case "keyval" :
-					that.html += "<b>" + k.key + "</b>" + " : " + k.value + "<br>";
+					that.html += k.key + " : " + k.value + "<br>";
 					// that.html += k.key + " : " + k.value + "<br>";
 					break;
 				case "minorHeading" : 
@@ -184,7 +183,7 @@
 		$scope.rightPanel = {
 			label : ""
 		};
-		$http.get('.data/ankur.json').then(function(resData){
+		$http.get('./data/ankur.json').then(function(resData){
 			data = resData.data
 			console.log(data);
 			$scope.personalInfo = data.personalInfo
@@ -207,6 +206,10 @@
 			data.pages.Personal.populate();
 		})
 	})
+
+	
+
+
 </script>
 
 
