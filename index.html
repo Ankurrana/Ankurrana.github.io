@@ -1,58 +1,124 @@
-<!DOCTYPE html><html lang="en" ng-app="portfolio" ng-controller="mainController"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"><head><title>Ankur rana| Developer</title><link rel="stylesheet" type="text/css" href="./node_modules/bootstrap/dist/css/bootstrap.css"><link rel="stylesheet" type="text/css" href="./node_modules/hover.css/css/hover-min.css"><script src="./node_modules/jquery/dist/jquery.min.js"></script><script src="./node_modules/bootstrap/dist/js/bootstrap.min.js"></script><script src="./node_modules/angular/angular.min.js"></script><script src="./node_modules/angular-sanitize/angular-sanitize.js"></script></head></html><style>
-	
+
+<!DOCTYPE html><html lang="en" ng-app="portfolio" ng-controller="mainController"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"><head><title>Ankur rana| Developer</title><link rel="stylesheet" type="text/css" href="/public/node_modules/bootstrap/dist/css/bootstrap.css"><link rel="stylesheet" type="text/css" href="/public/node_modules/hover.css/css/hover-min.css"><script src="public/node_modules/jquery/dist/jquery.min.js"></script><script src="public/node_modules/bootstrap/dist/js/bootstrap.min.js"></script><script src="public/node_modules/angular/angular.min.js"></script><script src="public/node_modules/angular-sanitize/angular-sanitize.js"></script></head></html><style>
+	:root{
+		--main-bg-color : #59FFA0;
+		--main-heading-color:#9F96EA;
+		--page-tiles-color:#6F2DBD;
+	};
+
+	html,body{
+		height: 100%;
+	}
 	#mainContainer{
 		width:100%;
+		height:100%;
 	}
 
 	#leftPanel{
 		text-align: right;
+		padding-top: 5%;
 	}
 	#myimage{
-		height: 300px;
-	 	-webkit-transform: rotate(-45deg);
-	 	position: relative;
-	 	left:-10px;
+		max-height: 200px;
+		max-width: 200px;
+		height:90%;
+		width:90%;
 	 	z-index: 200;
-	 	padding-top: 50px;
-	 	
 	}
 
-	#rightPanel{
-		height: 700px;
-    	border-width: 1px;
-    	border-style:none none none solid;
-    	border-color: #e6e6e6;
-    	padding-left: 5%;
-    	padding-top: 100px;
-    	margin-right: 50px;
-	}
-
-	.icon:hover{
-		animation-name: imageWobble;
-    	animation-duration: 4s;
+	.icon{
+		
 	}
 	#LeftMenu{
-		position: relative;
-		top:50px;
+		padding-top: 5%;
+	}
+	#rightPanel{
+		min-height: 100%;
+    	padding-left: 5%;
+    	padding-top: 3%;
 	}
 	#LeftMenu li {
+		padding-top: 10%;		
 		height: 35px;
-		font-size: 20px
+		font-size: 20px;
+		white-space: nowrap;
+		color:var(--page-tiles-color);
+		
+	}
+	#TopMenu Li{
+		list-style: none;
+		display: inline;
+		padding-left: 2%;
+
+	}
+	#TopMenu{
+    	
+    	background-color: #4dffa6;
+    	font-size: large;
+    	
+    	width: 100%;
+
 	}
 	td{
 		vertical-align: top;
-		padding-right:40px;
+		padding-right:5em;
+
 	}
 	a {
 		color: #7d33cc;
 	}
 	body{
-		background: linear-gradient(to right,white, pink)
+		background: linear-gradient(to right,white, var(--main-bg-color))
 	}
-	@keyframes imageWobble {
-	    0%   {-webkit-transform: rotate(0deg);}
-	    25%  {-webkit-transform: rotate(-45deg);}
-	    50%  {-webkit-transform: rotate(0deg);
+	#topImage{
+		max-height: 100px;
+		max-width: 100px;
+		height: 100%;
+		width: 100%;
+	}
+
+	.smallImageContainer{
+		text-align: right;
+		margin: auto;
+	}
+
+	#heading{
+		
+		position: relative;
+	}
+	#heading h1{
+		padding: 10px;
+		background-position: relative;
+		color: var(--page-tiles-color)
+
+	}
+	#TopMenu .titleBar{
+		color:var(--page-tiles-color);
+	}
+
+	hr.style18 { 
+	  height: 30px; 
+	  border-style: solid; 
+	  border-color: #50514F; 
+	  border-width: 1px 0 0 0; 
+	  border-radius: 20px; 
+	} 
+	hr.style18:before { 
+	  display: block; 
+	  content: ""; 
+	  height: 30px; 
+	  margin-top: -31px; 
+	  border-style: solid; 
+	  border-color: #50514F; 
+	  border-width: 0 0 1px 0; 
+	  border-radius: 20px; 
+	}
+
+	h3,h2,h4{
+		color:#3D52D5;
+	}
+	b{
+		color:#5C6784
 	}
 </style>
 
@@ -74,11 +140,11 @@
 					that.html += k.html
 					break;
 				case "keyval" :
-					that.html += k.key + " : " + k.value + "<br>";
+					that.html += "<b>" + k.key + "</b>" + " : " + k.value + "<br>";
 					// that.html += k.key + " : " + k.value + "<br>";
 					break;
 				case "minorHeading" : 
-					that.html += "<h3>" + k.value + "</h3>"	;
+					that.html += "<h4>" + k.value + "</h4>"	;
 					break;
 				case "table" :
 					that.html = "<table>";
@@ -97,7 +163,7 @@
 					var itemNumber  = 0;
 					for(var i=0;i<k.items.length;i++){
 						that.html += "<tr>";
-						that.html += "<td>" + k.items[i].key  +"</td>" + "<td>" + k.items[i].value + "</td>";
+						that.html += "<td><b>" + k.items[i].key  +"</b></td>" + "<td>" + k.items[i].value + "</td>";
 						that.html += "</tr>"
 					}
 					that.html += "</table>";
@@ -118,7 +184,7 @@
 		$scope.rightPanel = {
 			label : ""
 		};
-		$http.get('./data/ankur.json').then(function(resData){
+		$http.get('.data/ankur.json').then(function(resData){
 			data = resData.data
 			console.log(data);
 			$scope.personalInfo = data.personalInfo
@@ -141,19 +207,31 @@
 			data.pages.Personal.populate();
 		})
 	})
-
-	
-
-
 </script>
 
 
 <body>
+	<div id="TopMenu">
+		<div class="fixed hidden-sm hidden-md hidden-lg">
+			<div class="row">
+				<div class="col-xs-3">
+					<div class="smallImageContainer"><img id="topImage" src="public/resources/me.jpg"></img></div>
+				</div>
+				<div class="col-xs-9 titleBar">	
+					<div class="row">
+						<ul class="list-unstyled">
+							<div ng-repeat="page in pages"><span ng-click="page.populate()" class="hvr-underline-from-center col-xs-4">{{ page.label }}</span></div>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
 	<div id="mainContainer" class="container">
 		<div class="row">
-			<div id="leftPanel" class="col-md-3">
+			<div id="leftPanel" class="col-md-3 col-sm-3 hidden-xs">
 				<div class="icon">
-					<img id="myimage" src="./resources/me.jpg">	
+					<img id="myimage" src="public/resources/me.jpg">	
 				</div>
 				<div id="LeftMenu">
 					<ul class="list-unstyled">
@@ -161,9 +239,10 @@
 					</ul>
 				</div>
 			</div>
-			<div id="rightPanel" class="col-md-6"  >
-				<h1>{{ rightPanel.label }}</h1>
-				<hr>
+			<div id="rightPanel" class="col-md-8 col-sm-8 col-sm-12"  >
+				
+				<div id="heading"><h1>{{ rightPanel.label }}</h1></div>
+				<hr class="style18">
 					<p style="overflow-y: auto;height:70vh;" ng-bind-html="rightPanel.desc"> </p>
 			</div>
 
