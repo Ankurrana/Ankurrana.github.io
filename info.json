@@ -1,0 +1,57 @@
+{
+    "name": "Ankur Rana",
+    "title": "Senior IC Engineer | Design and Architecture of Scalable Systems",
+    "location": "Delhi, India",
+    "email": "ankursofficial@gmail.com",
+    "linkedin": "https://www.linkedin.com/in/iamankurrana",
+    "medium": "https://medium.com/@ankurrana",
+    "summary": "Experienced Golang engineer specializing in building scalable, fault-tolerant systems with a focus on optimizing search solutions for e-commerce platforms. Strong interest in exploring new technologies such as web3 and AI language models. Aims to bring leadership and expertise to teams focused on high performance.",
+    "skills": {
+        "programming_languages": ["Golang", "Typescript", "Java"],
+        "technologies": ["Elasticsearch", "gRPC", "Kafka", "Linux", "Node.js", "Nginx", "Redis"],
+        "cloud_platforms": ["GCP", "AWS"],
+        "other": ["Design and Architecture", "Performance Optimization"]
+    },
+    "experience": [
+        {
+            "title": "Technical Architect",
+            "company": "Goto Group (Gojek - Tokopedia) / ByteDance (TikTok Shop)",
+            "duration": "April 2021 - May 2024",
+            "achievements": [
+                "Optimized Elasticsearch architecture to reduce latency.",
+                "Developed an Index Mapping Analyzer for Elasticsearch clusters.",
+                "Designed backend systems for e-commerce applications using Golang.",
+                "Implemented automated canary deployments for Golang services.",
+                "Developed a Linux System Metrics analysis tool for infrastructure optimization."
+            ],
+            "tech_stack": ["Golang", "Elasticsearch", "Kafka", "Linux", "GCP", "Postgres", "Nginx", "Redis", "Terraform", "gRPC"]
+        },
+        {
+            "title": "Senior Software Engineer 2",
+            "company": "Fareye Logistics",
+            "duration": "April 2018 - March 2021",
+            "achievements": [
+                "Decomposed a monolithic application into a microservices architecture.",
+                "Developed a scalable Node.js application for Dominos Delivery Partners.",
+                "Contributed to the Debezium open-source tool by reporting functional and performance issues."
+            ],
+            "tech_stack": ["Java", "Node.js", "Kafka", "Typescript", "Nginx", "RDS", "Docker", "AWS"]
+        },
+        {
+            "title": "Software Engineer",
+            "company": "Kronos Incorporated",
+            "duration": "May 2015 - March 2018",
+            "achievements": [
+                "Solved production issues in a payroll processing application."
+            ],
+            "tech_stack": ["Java", "Typescript", "Node.js", "Angular", "Postgres", "MS SQL"]
+        }
+    ],
+    "education": {
+        "degree": "Computer Science and Engineering",
+        "institution": "JSS Academy of Technical Education",
+        "duration": "March 2011 - March 2015",
+        "gpa": "8/10"
+    },
+    "interests": ["LLM (Language Models)", "Competitive Coding", "Problem Solving", "Stock Markets"]
+}

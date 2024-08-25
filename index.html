@@ -3,90 +3,149 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ankur Rana - Technical Architect</title>
+    <title>Ankur Rana - Portfolio</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.css" />
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.css"></script>
+
+<script>
+  AOS.init();
+</script>
 </head>
+
+
+
+
+<style>
+    /* Example of a modern color scheme */
+    :root {
+      --primary-color: #005f73;
+      --secondary-color: #0a9396;
+      --accent-color: #9496d2;
+      --light-color: #e9d8a6;
+      --dark-color: #ee9b00;
+    }
+  </style>
 <body>
     <header>
-        <h1>Ankur Rana</h1>
-        <p>Senior IC Engineer | Design and Architecture of Scalable Systems</p>
+        <div class="container header-content">
+            <img src="resources/me.jpg" alt="Ankur Rana" class="profile-pic">
+            <div>
+                <h1>Ankur Rana</h1>
+                <p>Senior IC Engineer | Design and Architecture of Scalable Systems</p>
+                <p>Location: Delhi, India</p>
+                
+                <p>Email: <a href="mailto:ankursofficial@gmail.com" style="color: var(--accent-color);">ankursofficial@gmail.com</a></p>
+                <p>LinkedIn: <a href="https://linkedin.com/in/iamankurrana" target="_blank" style="color: var(--accent-color);">linkedin.com/in/iamankurrana</a></p>
+                <p>Medium: <a href="https://medium.com/@ankurrana" target="_blank" style="color: var(--accent-color);">medium.com/@ankurrana</a></p>
+            </div>
+            </div>
+        </div>
     </header>
 
-    <nav>
-        <ul>
-            <li><a href="#about">About Me</a></li>
-            <li><a href="#skills">Skills</a></li>
-            <li><a href="#experience">Experience</a></li>
-            <li><a href="#education">Education</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
-    </nav>
+    <main>
+        <section class="summary">
+            <div class="container">
+                <h2>Professional Summary</h2>
+                <p>Ankur Rana is a highly skilled software architect/engineer with over 10 years of experience. He specializes in designing and building scalable, fault-tolerant systems for various industries. Ankur has a deep understanding of modern technologies and frameworks, including Golang, TypeScript, and Java. He is proficient in working with cloud platforms like GCP and AWS, and has expertise in technologies such as Elasticsearch, gRPC, Kafka, Linux, Node.js, Nginx, and Redis. Ankur is passionate about design and architecture, and is dedicated to optimizing system performance. With his strong leadership and problem-solving skills, Ankur brings valuable expertise to any team focused on delivering high-performance solutions.</p>
+            </div>
+            </div>
+        </section>
 
-    <section id="about">
-        <h2>About Me</h2>
-        <p>Experienced Golang engineer specializing in building scalable fault-tolerant systems that perform exceptionally well. Skilled in designing and optimizing search solutions for e-commerce platforms to enhance user experiences and drive sales.</p>
-    </section>
+        <section class="skills">
+            <div class="container">
+                <h2>Skills</h2>
+                <ul>
+                    <li>Programming Languages: Golang, Typescript, Java</li>
+                    <li>Technologies: Elasticsearch, gRPC, Kafka, Linux, Node.js, Nginx, Redis</li>
+                    <li>Cloud Platforms: GCP, AWS</li>
+                    <li>Other: Design and Architecture, Performance Optimization</li>
+                </ul>
+            </div>
+        </section>
 
-    <section id="skills">
-        <h2>Skills</h2>
-        <ul>
-            <li>Golang</li>
-            <li>Elasticsearch</li>
-            <li>gRPC</li>
-            <li>Kafka</li>
-            <li>Linux</li>
-            <li>Performance Optimization</li>
-            <li>Design and Architecture</li>
-            <li>Node.js</li>
-            <li>Typescript</li>
-            <li>GCP</li>
-            <li>AWS</li>
-        </ul>
-    </section>
+        <section class="experience">
+            <div class="container">
+                <h2>Work Experience</h2>
+                <div>
+                    <h3>Technical Architect - Goto Group (Gojek - Tokopedia) / ByteDance (TikTok Shop)</h3>
+                    <p>Duration: April 2021 - May 2024</p>
+                    <ul>
+                        <li>Optimized Elasticsearch architecture to reduce latency.</li>
+                        <li>Developed an Index Mapping Analyzer for Elasticsearch clusters.</li>
+                        <li>Designed backend systems for e-commerce applications using Golang.</li>
+                        <li>Implemented automated canary deployments for Golang services.</li>
+                        <li>Developed a Linux System Metrics analysis tool for infrastructure optimization.</li>
+                    </ul>
+                </div>
+                <div>
+                    <h3>Senior Software Engineer 2 - Fareye Logistics</h3>
+                    <p>Duration: April 2018 - March 2021</p>
+                    <ul>
+                        <li>Decomposed a monolithic application into a microservices architecture.</li>
+                        <li>Developed a scalable Node.js application for Dominos Delivery Partners.</li>
+                        <li>Contributed to the Debezium open-source tool by reporting functional and performance issues.</li>
+                    </ul>
+                </div>
+                <div>
+                    <h3>Software Engineer - Kronos Incorporated</h3>
+                    <p>Duration: May 2015 - March 2018</p>
+                    <ul>
+                        <li>Solved production issues in a payroll processing application.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
 
-    <section id="experience">
-        <h2>Work Experience</h2>
+        <section class="education">
+            <div class="container">
+                <h2>Education</h2>
+                <p>Computer Science and Engineering, JSS Academy of Technical Education, March 2011 - March 2015, GPA: 8/10</p>
+            </div>
+        </section>
 
-        <h3>Technical Architect - Goto Group</h3>
-        <p><strong>04/2021 - 05/2024</strong> | Major South East Asian Ecommerce platform</p>
-        <ul>
-            <li>Optimized Search architecture to reduce p99 latency from 210ms to 105ms.</li>
-            <li>Developed Index Mapping Analyser for Elasticsearch clusters.</li>
-            <li>Designed and developed backend systems for eCommerce applications using Golang.</li>
-            <li>Set up automated canary deployments for go services.</li>
-            <li>Created a Linux System Metrics analysis tool for system utilization metrics.</li>
-        </ul>
+        <section class="interests">
+            <div class="container">
+                <h2>Interests</h2>
+                <ul>
+                    <li>LLM (Language Models)</li>
+                    <li>Competitive Coding</li>
+                    <li>Problem Solving</li>
+                    <li>Stock Markets</li>
+                </ul>
+            </div>
+        </section>
+        <section class="projects">
+            <div class="container">
+                <h2>Projects</h2>
+                <ul>
+                    <li>
+                        <h3>ES Mapping Analyser</h3>
+                        <p>The Elasticsearch Mapping Analyzer (EMA) is a tool that automates the process of identifying potential optimizations for any Elasticsearch index, based on set of queries that are run on that index.
 
-        <h3>Senior Software Engineer 2 - Fareye Logistics</h3>
-        <p><strong>04/2018 - 03/2021</strong></p>
-        <ul>
-            <li>Decomposed a monolithic application into a microservices architecture.</li>
-            <li>Created a scalable Node.js application for Dominos Delivery Partners.</li>
-            <li>Reported functional and performance issues to the Debezium open-source tool.</li>
-        </ul>
+                        </p>
+                        <p>GitHub Repository: <a href="https://github.com/Ankurrana/es-mapping-analyser" target="_blank" style="color: var(--accent-color);">Ankurrana/es-mapping-analyser</a></p>
+                    </li>
+                </ul>
+                </ul>
+            </div>
+        </section>
 
-        <h3>Software Engineer - Kronos Incorporated</h3>
-        <p><strong>05/2015 - 03/2018</strong></p>
-        <ul>
-            <li>Solved production issues in the payroll processing application.</li>
-        </ul>
-    </section>
+        <section class="leetcode-profile">
+            <div class="container">
+                <h2>LeetCode Profile</h2>
+                <p>Username: ankur123rana</p>
+                <p>Link: <a href="https://leetcode.com/ankur123rana" target="_blank" style="color: var(--accent-color);">leetcode.com/ankur123rana</a></p>
+            </div>
+        </section>
+    </main>
+    </main>
 
-    <section id="education">
-        <h2>Education</h2>
-        <p><strong>Computer Science and Engineering</strong> | JSS Academy of Technical Education</p>
-        <p><strong>03/2011 - 03/2015</strong> | GPA: 8/10</p>
-    </section>
-
-    <section id="contact">
-        <h2>Contact</h2>
-        <p>Email: <a href="mailto:ankursofficial@gmail.com">ankursofficial@gmail.com</a></p>
-        <p>LinkedIn: <a href="https://www.linkedin.com/in/iamankurrana">linkedin.com/in/iamankurrana</a></p>
-        <p>Medium: <a href="https://medium.com/@ankurrana">medium.com/@ankurrana</a></p>
-    </section>
-
+    
     <footer>
-        <p>&copy; 2024 Ankur Rana. All rights reserved.</p>
+        <div class="container">
+            <p>Contact me at <a href="mailto:ankursofficial@gmail.com">ankursofficial@gmail.com</a></p>
+        </div>
     </footer>
 </body>
 </html>
