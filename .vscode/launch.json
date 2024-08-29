@@ -10,7 +10,7 @@
             "request": "launch",
             "mode": "auto",
             "env": {
-                "FUNCTION_TARGET": "upload",
+                "FUNCTION_TARGET": "download",
                 "LOCAL_ONLY": "true"
             },
             "program": "/Users/ankurrana/Documents/codebase/Ankurrana.github.io/cloud_functions"
