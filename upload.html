@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/tesseract.js@2.1.1"></script>
     <title>File Upload</title>
     <style>
         body {
@@ -95,16 +96,64 @@
             }
         }
     </style>
+    <script>
+        function displayFileNames() {
+            const fileInput = document.getElementById('files');
+            const fileNames = Array.from(fileInput.files).map(file => file.name);
+            alert(`Selected files: ${fileNames.join(', ')}`);
+        }
+
+        async function extractTextFromImage() {
+    try {
+        alert("Extracting text...");
+
+        const fileInput = document.getElementById('files');
+        const file = fileInput.files[0];
+
+        if (!file) {
+            alert("Please select a file first.");
+            return;
+        }
+
+        const result = await Tesseract.recognize(
+            file,
+            'eng', // Specify the language model (e.g., 'eng' for English)
+            {
+                logger: m => console.log(m) // Optional: Log progress to console
+            }
+        );
+
+        const extractedText = result.data.text;
+        alert(`Extracted Text: ${extractedText}`);
+    } catch (error) {
+        console.error('Error:', error);
+        alert("An error occurred while extracting text.",error);
+
+        return false
+    }
+}
+
+function addFields() {
+    const form = document.querySelector('form');
+    const input = document.createElement('input');
+    input.type = 'text';
+    input.name = 'newField';
+    input.placeholder = 'New Field';
+    form.appendChild(input);
+}
+
+    </script>
 </head>
 <body>
     <div class="container">
         <h1>Upload Files</h1>
         <form action="https://us-central1-ankur-personal.cloudfunctions.net/dynamic?func=upload" method="POST" enctype="multipart/form-data">
             <div class="file-input">
-                <label for="files">Drag & Drop files here or click to browse</label>
-                <input type="file" id="files" name="files" multiple>
+            <label for="files">Drag & Drop files here or click to browse</label>
+            <input type="file" id="files" name="files" multiple>
             </div>
-            <input type="submit" value="Upload" class="upload-btn">
+            <input type="submit" value="Upload" class="upload-btn"">
+        </form>
         </form>
     </div>
 </body>

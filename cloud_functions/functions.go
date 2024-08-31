@@ -7,6 +7,7 @@ import (
 	"html/template"
 	"io"
 	"net/http"
+	"strings"
 
 	"cloud.google.com/go/storage"
 	"github.com/GoogleCloudPlatform/functions-framework-go/functions"
@@ -52,6 +53,7 @@ func uploadHandler(w http.ResponseWriter, r *http.Request) {
 
 	// Iterate over the uploaded files
 	for _, file := range files {
+
 		// Open the uploaded file
 		f, err := file.Open()
 		if err != nil {
@@ -153,9 +155,10 @@ func downloadHandler(w http.ResponseWriter, r *http.Request) {
 type GCSFile struct {
 	Name     string
 	FileSize string
+	Metadata string
 }
 
-func listFiles() []GCSFile {
+func listFiles(search string) []GCSFile {
 	// Set up your Google Cloud Storage client
 	ctx := context.Background()
 	client, err := storage.NewClient(ctx)
@@ -180,20 +183,25 @@ func listFiles() []GCSFile {
 			return nil
 		}
 
-		files = append(files, GCSFile{
-			Name:     objAttrs.Name,
-			FileSize: fmt.Sprintf("%d bytes", objAttrs.Size),
-		})
+		if search == "" || strings.Contains(strings.ToLower(objAttrs.Name), strings.ToLower(search)) || strings.Contains(strings.ToLower(objAttrs.Metadata["desc"]), strings.ToLower(search)) {
+			files = append(files, GCSFile{
+				Name:     objAttrs.Name,
+				FileSize: fmt.Sprintf("%d bytes", objAttrs.Size),
+				Metadata: objAttrs.Metadata["desc"],
+			})
+		}
 	}
 
 	return files
 }
 
 func listFilesHandler(w http.ResponseWriter, r *http.Request) {
+
+	searchTerm := r.URL.Query().Get("search")
 	// Set up your Google Cloud Storage client
-	files := listFiles()
+	files := listFiles(searchTerm)
 	// Create a template for the HTML content
-	htmlTemplate := `<html><body><ul>{{range .}}<li><a href="/dynamic?func=download&filename={{.Name}}">{{.Name}}</a> ({{.FileSize}})</li>{{end}}</ul></body></html>`
+	htmlTemplate := `<html><body><ul>{{range .}}<li><a href="/dynamic?func=download&filename={{.Name}}">{{.Name}}</a> ({{.FileSize}})   ({{.Metadata}})  </li>{{end}}</ul></body></html>`
 	// Create a new buffer to store the rendered HTML
 	var buf bytes.Buffer
 	// Execute the template with the files as the data

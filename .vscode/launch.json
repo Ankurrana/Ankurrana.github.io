@@ -10,7 +10,7 @@
             "request": "launch",
             "mode": "auto",
             "env": {
-                "FUNCTION_TARGET": "download",
+                "FUNCTION_TARGET": "dynamic",
                 "LOCAL_ONLY": "true"
             },
             "program": "/Users/ankurrana/Documents/codebase/Ankurrana.github.io/cloud_functions"
