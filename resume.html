@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ankur Rana — Resume</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* ============================================
+           ATS-Friendly Resume — Print-optimized
+           ============================================ */
+        *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+        :root {
+            --text: #1a1a1a;
+            --text-secondary: #444;
+            --accent: #1a56db;
+            --border: #d1d5db;
+            --bg: #ffffff;
+            --section-gap: 20px;
+        }
+
+        html { font-size: 14px; }
+
+        body {
+            font-family: 'Inter', 'Segoe UI', Arial, sans-serif;
+            color: var(--text);
+            background: var(--bg);
+            line-height: 1.55;
+            max-width: 850px;
+            margin: 0 auto;
+            padding: 40px 48px;
+        }
+
+        a { color: var(--accent); text-decoration: none; }
+        a:hover { text-decoration: underline; }
+
+        /* ---- Header ---- */
+        .resume-header { text-align: center; margin-bottom: var(--section-gap); }
+
+        .resume-header h1 {
+            font-size: 2rem;
+            font-weight: 700;
+            letter-spacing: -0.5px;
+            color: var(--text);
+            margin-bottom: 4px;
+        }
+
+        .resume-header .tagline {
+            font-size: 1.05rem;
+            color: var(--text-secondary);
+            font-weight: 500;
+            margin-bottom: 10px;
+        }
+
+        .contact-row {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 6px 20px;
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+        }
+
+        .contact-row span::before {
+            content: '';
+        }
+
+        /* ---- Section ---- */
+        .section { margin-bottom: var(--section-gap); }
+
+        .section-title {
+            font-size: 0.95rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            color: var(--accent);
+            border-bottom: 2px solid var(--accent);
+            padding-bottom: 4px;
+            margin-bottom: 12px;
+        }
+
+        /* ---- Summary ---- */
+        .summary p {
+            color: var(--text-secondary);
+            font-size: 0.92rem;
+            line-height: 1.65;
+        }
+
+        /* ---- Skills ---- */
+        .skills-table {
+            width: 100%;
+            font-size: 0.9rem;
+        }
+
+        .skills-table td {
+            padding: 3px 0;
+            vertical-align: top;
+        }
+
+        .skills-table .label {
+            font-weight: 600;
+            width: 160px;
+            color: var(--text);
+            white-space: nowrap;
+            padding-right: 12px;
+        }
+
+        .skills-table .value {
+            color: var(--text-secondary);
+        }
+
+        /* ---- Experience ---- */
+        .job { margin-bottom: 18px; }
+        .job:last-child { margin-bottom: 0; }
+
+        .job-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            flex-wrap: wrap;
+            margin-bottom: 2px;
+        }
+
+        .job-title {
+            font-size: 1rem;
+            font-weight: 700;
+            color: var(--text);
+        }
+
+        .job-date {
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+            font-weight: 500;
+            white-space: nowrap;
+        }
+
+        .job-company {
+            font-size: 0.92rem;
+            color: var(--text-secondary);
+            font-weight: 500;
+            margin-bottom: 6px;
+        }
+
+        .job-tech {
+            font-size: 0.8rem;
+            color: var(--text-secondary);
+            margin-bottom: 6px;
+            font-style: italic;
+        }
+
+        .job ul {
+            padding-left: 18px;
+            margin: 0;
+        }
+
+        .job li {
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+            margin-bottom: 3px;
+            line-height: 1.55;
+        }
+
+        .job li strong {
+            color: var(--text);
+            font-weight: 600;
+        }
+
+        /* ---- Projects ---- */
+        .project { margin-bottom: 10px; }
+        .project-name { font-weight: 600; font-size: 0.95rem; }
+        .project p { font-size: 0.9rem; color: var(--text-secondary); margin-top: 2px; }
+
+        /* ---- Education ---- */
+        .edu-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+        }
+        .edu-degree { font-weight: 600; font-size: 0.95rem; }
+        .edu-date { font-size: 0.85rem; color: var(--text-secondary); }
+        .edu-school { font-size: 0.9rem; color: var(--text-secondary); }
+
+        /* ---- Print ---- */
+        @media print {
+            html { font-size: 12.5px; }
+            body { padding: 0; max-width: 100%; }
+            a { color: var(--text) !important; }
+            .section-title { color: var(--text) !important; border-color: var(--text) !important; }
+            @page { margin: 0.55in 0.6in; }
+        }
+
+        /* ---- Screen toolbar ---- */
+        .toolbar {
+            text-align: center;
+            margin-bottom: 24px;
+        }
+        .toolbar button {
+            background: var(--accent);
+            color: #fff;
+            border: none;
+            padding: 10px 28px;
+            border-radius: 6px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            cursor: pointer;
+        }
+        .toolbar button:hover { opacity: 0.9; }
+
+        @media print {
+            .toolbar { display: none; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="toolbar">
+        <button onclick="window.print()">Download as PDF</button>
+    </div>
+
+    <!-- ============ HEADER ============ -->
+    <header class="resume-header">
+        <h1>Ankur Rana</h1>
+        <p class="tagline">Senior Software Engineer | System Architect | Distributed Systems &amp; AI</p>
+        <div class="contact-row">
+            <span>Bangalore, India</span>
+            <span>+91 9818012290</span>
+            <span><a href="mailto:ankursofficial@gmail.com">ankursofficial@gmail.com</a></span>
+            <span><a href="https://linkedin.com/in/iamankurrana">linkedin.com/in/iamankurrana</a></span>
+            <span><a href="https://github.com/Ankurrana">github.com/Ankurrana</a></span>
+        </div>
+    </header>
+
+    <!-- ============ SUMMARY ============ -->
+    <section class="section summary">
+        <h2 class="section-title">Professional Summary</h2>
+        <p>Results-driven software engineer and system architect with over 10 years of experience designing, building, and scaling high-performance distributed systems. Currently at Microsoft, developing AI-powered Copilot Agents leveraging LLMs and Microsoft Copilot Studio. Demonstrated ability to diagnose complex performance bottlenecks and systematically optimise systems to extract maximum throughput from existing infrastructure. Deep expertise in Golang, TypeScript, and Java, with extensive hands-on experience across Elasticsearch, Kafka, gRPC, Redis, and cloud platforms (GCP, AWS). Committed to rigorous system design, performance engineering, and applying AI to accelerate software delivery at scale.</p>
+    </section>
+
+    <!-- ============ SKILLS ============ -->
+    <section class="section">
+        <h2 class="section-title">Technical Skills</h2>
+        <table class="skills-table">
+            <tr>
+                <td class="label">Languages</td>
+                <td class="value">Golang (Go), TypeScript, Java, JavaScript</td>
+            </tr>
+            <tr>
+                <td class="label">Backend &amp; Data</td>
+                <td class="value">Elasticsearch, Apache Kafka, gRPC, Redis, PostgreSQL, MS SQL, Node.js, Nginx</td>
+            </tr>
+            <tr>
+                <td class="label">Cloud &amp; DevOps</td>
+                <td class="value">Google Cloud Platform (GCP), Amazon Web Services (AWS), Docker, Terraform, CI/CD, Canary Deployments</td>
+            </tr>
+            <tr>
+                <td class="label">Architecture</td>
+                <td class="value">Distributed Systems, Microservices, Event-Driven Architecture, System Design (HLD/LLD), Performance Optimisation</td>
+            </tr>
+            <tr>
+                <td class="label">AI &amp; Automation</td>
+                <td class="value">Large Language Models (LLMs), Microsoft Copilot Studio, AI-Assisted Development, Workflow Automation</td>
+            </tr>
+            <tr>
+                <td class="label">Leadership</td>
+                <td class="value">Technical Architecture, Team Leadership, Mentoring, Cross-Team Collaboration, Customer Engagement</td>
+            </tr>
+        </table>
+    </section>
+
+    <!-- ============ EXPERIENCE ============ -->
+    <section class="section">
+        <h2 class="section-title">Professional Experience</h2>
+
+        <div class="job">
+            <div class="job-header">
+                <span class="job-title">Senior Software Engineer</span>
+                <span class="job-date">October 2025 — Present</span>
+            </div>
+            <div class="job-company">Microsoft — ESS (Employee Self Service) Team, Bangalore</div>
+            <div class="job-tech">Tech: Microsoft Copilot Studio, LLMs, REST APIs, Enterprise Integrations</div>
+            <ul>
+                <li>Building <strong>ESS</strong>, an AI-powered Copilot Agent that streamlines employee interactions with HR and IT systems, serving <strong>Microsoft's global workforce of 200,000+ employees</strong></li>
+                <li>Took end-to-end ownership of extensibility platform post engineering re-org; resolved critical production blockers that <strong>unblocked ESS rollout for multiple strategic enterprise customers</strong>, directly maintaining customer confidence and retention</li>
+                <li>Designed and implemented natural-language workflows powered by LLMs and Microsoft Copilot Studio, <strong>reducing average HR/IT task completion time</strong> by replacing multi-step manual processes with conversational interactions</li>
+                <li>Improved ESS user experience through UX enhancements that <strong>significantly increased user engagement and satisfaction</strong> across enterprise deployments</li>
+                <li>Led the onboarding of <strong>multiple Fortune 500 and multi-million dollar enterprise customers</strong> onto the ESS platform, directly contributing to product revenue growth and market expansion</li>
+                <li>Streamlined customer support channels and built internal knowledge-sharing processes, <strong>reducing support ticket resolution time</strong> and enabling the support team to handle issues independently</li>
+                <li>Mentored and onboarded new engineers to the project, <strong>distributing ownership across 3 additional contributors</strong> and improving execution velocity for the broader team</li>
+                <li>Proactively joined customer escalation calls outside regular hours, <strong>resolving blocking issues within hours</strong> and ensuring uninterrupted ESS adoption momentum</li>
+            </ul>
+        </div>
+
+        <div class="job">
+            <div class="job-header">
+                <span class="job-title">Technical Architect</span>
+                <span class="job-date">April 2021 — May 2024</span>
+            </div>
+            <div class="job-company">Goto Group (Gojek · Tokopedia) / ByteDance (TikTok Shop)</div>
+            <div class="job-tech">Tech: Golang, Elasticsearch, Kafka, gRPC, PostgreSQL, Redis, Nginx, Terraform, Linux, GCP</div>
+            <ul>
+                <li>Optimised search architecture, <strong>reducing p99 latency from 210ms to 105ms (50% improvement)</strong> by tuning Elasticsearch index mappings, shard strategy, and data distribution</li>
+                <li>Reduced memory allocations in hot Go code paths, cutting application CPU usage and GC pause times across high-throughput services</li>
+                <li>Built an <strong>Index Mapping Analyser</strong> (Golang) that automated Elasticsearch configuration optimisation across <strong>100+ ES clusters</strong> at Tokopedia</li>
+                <li>Designed HLD &amp; LLD and developed backend systems for e-commerce applications — ingestion pipelines, user-facing APIs, and internal services</li>
+                <li>Implemented automated canary deployment pipelines for Go services, significantly reducing manual post-deployment monitoring overhead</li>
+                <li>Created a Linux System Metrics analysis tool (CPU, Disk IO, throughput, memory) to recommend cost-effective infrastructure across Go services, ES clusters, Kafka, and PostgreSQL</li>
+                <li>Led small teams of 4–5 engineers on high-impact initiatives; worked remotely for 2 years during COVID</li>
+            </ul>
+        </div>
+
+        <div class="job">
+            <div class="job-header">
+                <span class="job-title">Senior Software Engineer 2</span>
+                <span class="job-date">April 2018 — March 2021</span>
+            </div>
+            <div class="job-company">Fareye Logistics</div>
+            <div class="job-tech">Tech: Java, Node.js, TypeScript, Kafka, Nginx, Docker, Docker Swarm, RDS, AWS</div>
+            <ul>
+                <li>Decomposed a monolithic application into <strong>event-driven microservices</strong> communicating via Kafka; designed, built, and maintained them as the sole developer</li>
+                <li>Architected a highly scalable Node.js real-time tracking platform for Dominos Delivery Partners, handling <strong>millions of requests per second</strong> — enabling live driver-to-customer visibility and data-driven delivery performance incentives</li>
+                <li>Contributed to the open-source <strong>Debezium</strong> CDC tool by identifying and reporting functional and performance issues, improving the tool for the broader community</li>
+            </ul>
+        </div>
+
+        <div class="job">
+            <div class="job-header">
+                <span class="job-title">Software Engineer</span>
+                <span class="job-date">May 2015 — March 2018</span>
+            </div>
+            <div class="job-company">Kronos Incorporated (now UKG)</div>
+            <div class="job-tech">Tech: Java, TypeScript, Node.js, Angular, PostgreSQL, MS SQL</div>
+            <ul>
+                <li>Diagnosed and resolved critical production issues in an enterprise payroll processing application serving large-scale workforce operations</li>
+                <li>Developed features across the full stack using Java, TypeScript, Node.js, Angular, PostgreSQL, and MS SQL</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- ============ PROJECTS ============ -->
+    <section class="section">
+        <h2 class="section-title">Projects</h2>
+        <div class="project">
+            <span class="project-name">Elasticsearch Mapping Analyser</span> — <a href="https://github.com/Ankurrana/es-mapping-analyser">github.com/Ankurrana/es-mapping-analyser</a>
+            <p>Open-source Golang tool that automates identification of Elasticsearch index optimisations based on query patterns. Deployed across 100+ clusters at Tokopedia to improve search performance at scale.</p>
+        </div>
+    </section>
+
+    <!-- ============ EDUCATION ============ -->
+    <section class="section">
+        <h2 class="section-title">Education</h2>
+        <div class="edu-header">
+            <span class="edu-degree">Bachelor of Technology — Computer Science &amp; Engineering</span>
+            <span class="edu-date">March 2011 — March 2015</span>
+        </div>
+        <div class="edu-school">JSS Academy of Technical Education — GPA: 8.0 / 10.0</div>
+    </section>
+
+    <!-- ============ ADDITIONAL ============ -->
+    <section class="section">
+        <h2 class="section-title">Additional</h2>
+        <table class="skills-table">
+            <tr>
+                <td class="label">Interests</td>
+                <td class="value">Large Language Models, Competitive Programming, System Design, Stock Markets</td>
+            </tr>
+            <tr>
+                <td class="label">Profiles</td>
+                <td class="value"><a href="https://leetcode.com/ankur123rana">LeetCode</a> · <a href="https://medium.com/@ankurrana">Medium</a></td>
+            </tr>
+        </table>
+    </section>
+
+</body>
+</html>

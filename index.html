@@ -4,327 +4,495 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ankur Rana - Portfolio</title>
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-F8EY42G0ZX"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-F8EY42G0ZX');
+    </script>
+
     <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
-
-
-<style>
-    /* Example of a modern color scheme */
-    :root {
-      --primary-color: #005f73;
-      --secondary-color: #0a9396;
-      --accent-color: #9496d2;
-      --light-color: #e9d8a6;
-      --dark-color: #ee9b00;
-    }
-
-body, html {
-    margin: 0;
-    padding: 0;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: #f0f0f0;
-    color: #333;
-}
-body, html {
-    margin: 0;
-    padding: 0;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: #f0f0f0;
-    color: #333;
-}
-
-.container {
-    max-width: 1200px;
-    margin: auto;
-    padding: 20px;
-}
-
-.header-content {
-    display: flex;
-    align-items: center;
-    background-color: #ffffff;
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    padding: 20px;
-    margin-bottom: 20px;
-}
-
-.profile-pic {
-    border-radius: 50%;
-    width: 150px;
-    height: 150px;
-    margin-right: 20px;
-    border: 4px solid #3498db;
-}
-
-h1 {
-    margin: 0;
-    color: #3498db;
-}
-
-p {
-    margin: 5px 0;
-    font-size: 16px;
-}
-
-main {
-    background-color: #ffffff;
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    margin-bottom: 20px;
-}
-
-.skills, .experience, .projects {
-    margin: 20px;
-}
-
-h2 {
-    color: #2c3e50;
-    border-bottom: 2px solid #3498db;
-    padding-bottom: 5px;
-}
-
-ul {
-    list-style-type: none;
-    padding: 0;
-}
-
-li {
-    background-color: #ecf0f1;
-    margin: 10px 0;
-    padding: 10px;
-    border-radius: 5px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    transition: transform 0.2s ease-in-out;
-}
-
-li:hover {
-    transform: translateY(-5px);
-}
-
-footer {
-    text-align: center;
-    padding: 20px;
-    background-color: #3498db;
-    color: #ffffff;
-    border-radius: 0 0 10px 10px;
-}
-
-a {
-    color: #ffffff;
-    text-decoration: none;
-    font-weight: bold;
-}
-
-.container {
-    max-width: 1200px;
-    margin: auto;
-    padding: 20px;
-}
-
-.header-content {
-    display: flex;
-    align-items: center;
-    background-color: #ffffff;
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    padding: 20px;
-    margin-bottom: 20px;
-}
-
-.profile-pic {
-    border-radius: 50%;
-    width: 150px;
-    height: 150px;
-    margin-right: 20px;
-    border: 4px solid #3498db;
-}
-
-h1 {
-    margin: 0;
-    color: #3498db;
-}
-
-p {
-    margin: 5px 0;
-    font-size: 16px;
-}
-
-main {
-    background-color: #ffffff;
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    margin-bottom: 20px;
-}
-
-.skills, .experience, .projects {
-    margin: 20px;
-}
-
-h2 {
-    color: #2c3e50;
-    border-bottom: 2px solid #3498db;
-    padding-bottom: 5px;
-}
-
-ul {
-    list-style-type: none;
-    padding: 0;
-}
-
-li {
-    background-color: #ecf0f1;
-    margin: 10px 0;
-    padding: 10px;
-    border-radius: 5px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    transition: transform 0.2s ease-in-out;
-}
-
-li:hover {
-    transform: translateY(-5px);
-}
-
-footer {
-    text-align: center;
-    padding: 20px;
-    background-color: #3498db;
-    color: #ffffff;
-    border-radius: 0 0 10px 10px;
-}
-
-a {
-    color: #ffffff;
-    text-decoration: none;
-    font-weight: bold;
-}
-
-/* Modified code starts here */
-body, html {
-    background-color: #ccf2ff;
-    color: #008099;
-}
-  </style>
 <body>
-    <header>
-        <div class="container header-content">
-            <img src="resources/me.jpg" alt="Ankur Rana" class="profile-pic">
-            <div>
-                <h1>Ankur Rana</h1>
-                <p>Senior IC Engineer | Design and Architecture of Scalable Systems</p>
-                <p>Location: Delhi, India</p>
-                
-                <p>Email: <a href="mailto:ankursofficial@gmail.com" style="color: var(--accent-color);">ankursofficial@gmail.com</a></p>
-                <p>LinkedIn: <a href="https://linkedin.com/in/iamankurrana" target="_blank" style="color: var(--accent-color);">linkedin.com/in/iamankurrana</a></p>
-                <p>Medium: <a href="https://medium.com/@ankurrana" target="_blank" style="color: var(--     );">medium.com/@ankurrana</a></p>
+
+    <!-- Animated background particles -->
+    <div class="bg-gradient"></div>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container nav-content">
+            <a href="#" class="nav-logo">&lt;AR /&gt;</a>
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#publications">Publications</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <button class="nav-toggle" aria-label="Toggle navigation">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header id="hero" class="hero">
+        <div class="container hero-content">
+            <div class="hero-text">
+                <p class="hero-greeting">Hello, I'm</p>
+                <h1 class="hero-name">Ankur Rana</h1>
+                <p class="hero-title">
+                    <span class="typing-wrapper">
+                        <span class="typing-text"></span><span class="typing-cursor">|</span>
+                    </span>
+                </p>
+                <p class="hero-subtitle">Architecting large-scale distributed systems and AI-powered enterprise experiences with over a decade of engineering leadership.</p>
+                <div class="hero-cta">
+                    <a href="#contact" class="btn btn-primary">Get In Touch</a>
+                    <a href="#projects" class="btn btn-outline">View Projects</a>
+                    <a href="Ankur_Rana_Resume.pdf" target="_blank" class="btn btn-outline">Resume</a>
+                </div>
+                <div class="hero-social">
+                    <a href="mailto:ankursofficial@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+                    <a href="tel:+919818012290" aria-label="Phone"><i class="fas fa-phone"></i></a>
+                    <a href="https://linkedin.com/in/iamankurrana" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="https://medium.com/@ankurrana" target="_blank" aria-label="Medium"><i class="fab fa-medium-m"></i></a>
+                    <a href="https://github.com/Ankurrana" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                    <a href="https://leetcode.com/ankur123rana" target="_blank" aria-label="LeetCode"><i class="fas fa-code"></i></a>
+                </div>
             </div>
+            <div class="hero-image">
+                <div class="profile-pic-wrapper">
+                    <img src="resources/me_professional.jpeg" alt="Ankur Rana" class="profile-pic">
+                </div>
             </div>
         </div>
     </header>
 
     <main>
-        <section class="summary">
+        <!-- About Section -->
+        <section id="about" class="section about">
             <div class="container">
-                <h2>Professional Summary</h2>
-                <p>Ankur Rana is a highly skilled software architect/engineer with over 10 years of experience. He specializes in designing and building scalable, fault-tolerant systems for various industries. Ankur has a deep understanding of modern technologies and frameworks, including Golang, TypeScript, and Java. He is proficient in working with cloud platforms like GCP and AWS, and has expertise in technologies such as Elasticsearch, gRPC, Kafka, Linux, Node.js, Nginx, and Redis. Ankur is passionate about design and architecture, and is dedicated to optimizing system performance. With his strong leadership and problem-solving skills, Ankur brings valuable expertise to any team focused on delivering high-performance solutions.</p>
-            </div>
-            </div>
-        </section>
-
-        <section class="skills">
-            <div class="container">
-                <h2>Skills</h2>
-                <ul>
-                    <li>Programming Languages: Golang, Typescript, Java</li>
-                    <li>Technologies: Elasticsearch, gRPC, Kafka, Linux, Node.js, Nginx, Redis</li>
-                    <li>Cloud Platforms: GCP, AWS</li>
-                    <li>Other: Design and Architecture, Performance Optimization</li>
-                </ul>
-            </div>
-        </section>
-
-        <section class="experience">
-            <div class="container">
-                <h2>Work Experience</h2>
-                <div>
-                    <h3>Technical Architect - Goto Group (Gojek - Tokopedia) / ByteDance (TikTok Shop)</h3>
-                    <p>Duration: April 2021 - May 2024</p>
-                    <ul>
-                        <li>Optimized Elasticsearch architecture to reduce latency.</li>
-                        <li>Developed an Index Mapping Analyzer for Elasticsearch clusters.</li>
-                        <li>Designed backend systems for e-commerce applications using Golang.</li>
-                        <li>Implemented automated canary deployments for Golang services.</li>
-                        <li>Developed a Linux System Metrics analysis tool for infrastructure optimization.</li>
-                    </ul>
-                </div>
-                <div>
-                    <h3>Senior Software Engineer 2 - Fareye Logistics</h3>
-                    <p>Duration: April 2018 - March 2021</p>
-                    <ul>
-                        <li>Decomposed a monolithic application into a microservices architecture.</li>
-                        <li>Developed a scalable Node.js application for Dominos Delivery Partners.</li>
-                        <li>Contributed to the Debezium open-source tool by reporting functional and performance issues.</li>
-                    </ul>
-                </div>
-                <div>
-                    <h3>Software Engineer - Kronos Incorporated</h3>
-                    <p>Duration: May 2015 - March 2018</p>
-                    <ul>
-                        <li>Solved production issues in a payroll processing application.</li>
-                    </ul>
+                <h2 class="section-title"><span class="title-number">01.</span> About Me</h2>
+                <div class="about-content">
+                    <p>I'm a software engineer and system architect with over <strong>10 years of experience</strong> designing, building, and scaling high-performance distributed systems. Currently at <strong>Microsoft</strong>, I'm developing AI-powered Copilot Agents leveraging <strong>LLMs</strong> and <strong>Microsoft Copilot Studio</strong>.</p>
+                    <p>I have a demonstrated ability to diagnose complex performance bottlenecks and systematically optimise systems to extract maximum throughput from existing infrastructure. My deep expertise spans <strong>Golang</strong>, <strong>TypeScript</strong>, and <strong>Java</strong>, with extensive hands-on experience across Elasticsearch, Kafka, gRPC, Redis, and cloud platforms like <strong>GCP</strong> and <strong>AWS</strong>.</p>
+                    <p>I actively leverage <strong>AI and LLMs</strong> as a force multiplier in my engineering workflow — from rapid prototyping and architecture exploration to automated code analysis and intelligent debugging. This allows me to ship higher-quality software faster while staying focused on the problems that matter most.</p>
+                    <p>I'm committed to rigorous system design, performance engineering, and applying AI to accelerate software delivery at scale.</p>
+                    <div class="about-details">
+                        <div class="detail-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Bangalore, India</span>
+                        </div>
+                        <div class="detail-item">
+                            <i class="fas fa-phone"></i>
+                            <span>+91 9818012290</span>
+                        </div>
+                        <div class="detail-item">
+                            <i class="fas fa-briefcase"></i>
+                            <span>10+ Years Experience</span>
+                        </div>
+                        <div class="detail-item">
+                            <i class="fas fa-graduation-cap"></i>
+                            <span>B.Tech, CSE</span>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
 
-        <section class="education">
+        <!-- Impact Metrics -->
+        <section class="section metrics">
             <div class="container">
-                <h2>Education</h2>
-                <p>Computer Science and Engineering, JSS Academy of Technical Education, March 2011 - March 2015, GPA: 8/10</p>
+                <div class="metrics-grid">
+                    <div class="metric-item">
+                        <span class="metric-number" data-target="10">0</span><span class="metric-suffix">+</span>
+                        <span class="metric-label">Years of Experience</span>
+                    </div>
+                    <div class="metric-item">
+                        <span class="metric-number" data-target="24">0</span><span class="metric-suffix">K/s</span>
+                        <span class="metric-label">ES Cluster Throughput Managed</span>
+                    </div>
+                    <div class="metric-item">
+                        <span class="metric-number" data-target="300">0</span><span class="metric-suffix">K</span>
+                        <span class="metric-label">USD/Month Saved via EMA Tool</span>
+                    </div>
+                    <div class="metric-item">
+                        <span class="metric-number" data-target="673">0</span><span class="metric-suffix"></span>
+                        <span class="metric-label">LeetCode Problems &bull; Top 7%</span>
+                    </div>
+                </div>
             </div>
         </section>
 
-        <section class="interests">
+        <!-- Skills Section -->
+        <section id="skills" class="section skills">
             <div class="container">
-                <h2>Interests</h2>
-                <ul>
-                    <li>LLM (Language Models)</li>
-                    <li>Competitive Coding</li>
-                    <li>Problem Solving</li>
-                    <li>Stock Markets</li>
-                </ul>
+                <h2 class="section-title"><span class="title-number">02.</span> Skills & Technologies</h2>
+                <div class="skills-grid">
+                    <div class="skill-category">
+                        <h3><i class="fas fa-laptop-code"></i> Languages</h3>
+                        <div class="skill-tags">
+                            <span class="skill-tag">Golang</span>
+                            <span class="skill-tag">TypeScript</span>
+                            <span class="skill-tag">Java</span>
+                        </div>
+                    </div>
+                    <div class="skill-category">
+                        <h3><i class="fas fa-server"></i> Technologies</h3>
+                        <div class="skill-tags">
+                            <span class="skill-tag">Elasticsearch</span>
+                            <span class="skill-tag">gRPC</span>
+                            <span class="skill-tag">Kafka</span>
+                            <span class="skill-tag">Redis</span>
+                            <span class="skill-tag">Node.js</span>
+                            <span class="skill-tag">Nginx</span>
+                            <span class="skill-tag">Linux</span>
+                        </div>
+                    </div>
+                    <div class="skill-category">
+                        <h3><i class="fas fa-cloud"></i> Cloud Platforms</h3>
+                        <div class="skill-tags">
+                            <span class="skill-tag">Google Cloud (GCP)</span>
+                            <span class="skill-tag">Amazon Web Services (AWS)</span>
+                        </div>
+                    </div>
+                    <div class="skill-category">
+                        <h3><i class="fas fa-drafting-compass"></i> Architecture</h3>
+                        <div class="skill-tags">
+                            <span class="skill-tag">System Design</span>
+                            <span class="skill-tag">Microservices</span>
+                            <span class="skill-tag">Performance Optimization</span>
+                            <span class="skill-tag">Distributed Systems</span>
+                        </div>
+                    </div>
+                    <div class="skill-category">
+                        <h3><i class="fas fa-robot"></i> AI & Automation</h3>
+                        <div class="skill-tags">
+                            <span class="skill-tag">LLMs</span>
+                            <span class="skill-tag">Claude</span>
+                            <span class="skill-tag">Copilot Studio</span>
+                            <span class="skill-tag">AI-Assisted Development</span>
+                            <span class="skill-tag">Workflow Automation</span>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
-        <section class="projects">
-            <div class="container">
-                <h2>Projects</h2>
-                <ul>
-                    <li>
-                        <h3>ES Mapping Analyser</h3>
-                        <p>The Elasticsearch Mapping Analyzer (EMA) is a tool that automates the process of identifying potential optimizations for any Elasticsearch index, based on set of queries that are run on that index.
 
-                        </p>
-                        <p>GitHub Repository: <a href="https://github.com/Ankurrana/es-mapping-analyser" target="_blank" style="color: var(--accent-color);">Ankurrana/es-mapping-analyser</a></p>
-                    </li>
-                </ul>
-                </ul>
+        <!-- Experience Section -->
+        <section id="experience" class="section experience">
+            <div class="container">
+                <h2 class="section-title"><span class="title-number">03.</span> Experience</h2>
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-content">
+                            <div class="timeline-header">
+                                <h3>Senior Software Engineer</h3>
+                                <span class="timeline-company"><img src="https://img.icons8.com/color/24/microsoft.png" alt="Microsoft" class="company-logo"> Microsoft &mdash; ESS (Employee Self Service) Team</span>
+                                <span class="timeline-date">October 2025 &mdash; Present</span>
+                            </div>
+                            <ul class="timeline-list">
+                                <li>Building ESS, a Copilot Agent that streamlines the employee experience across HR and IT touchpoints, serving Microsoft's global workforce of 200,000+ employees</li>
+                                <li>Took end-to-end ownership of extensibility platform post engineering re-org; resolved critical production blockers that unblocked ESS rollout for multiple strategic enterprise customers</li>
+                                <li>Designed natural-language workflows powered by LLMs and Copilot Studio, reducing average HR/IT task completion time by replacing multi-step manual processes with conversational interactions</li>
+                                <li>Improved ESS user experience through UX enhancements that significantly increased user engagement and satisfaction across enterprise deployments</li>
+                                <li>Led the onboarding of multiple Fortune 500 and multi-million dollar enterprise customers onto the ESS platform, contributing to product revenue growth</li>
+                                <li>Streamlined support channels and built knowledge-sharing processes, reducing ticket resolution time and enabling the support team to operate independently</li>
+                                <li>Mentored and onboarded new engineers, distributing ownership across 3 additional contributors and accelerating team execution velocity</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-content">
+                            <div class="timeline-header">
+                                <h3>Technical Architect</h3>
+                                <span class="timeline-company"><img src="resources/tok_logo.png" alt="Tokopedia" class="company-logo"> Goto Group (Gojek - Tokopedia) / ByteDance (TikTok Shop)</span>
+                                <span class="timeline-date">April 2021 &mdash; May 2024</span>
+                            </div>
+                            <ul class="timeline-list">
+                                <li>Optimized search architecture reducing <strong>p99 latency from 210ms to 105ms</strong> by tuning Elasticsearch index mappings, shard strategy, and data distribution</li>
+                                <li>Reduced memory allocations in hot Go paths, cutting CPU usage and GC pauses across high-throughput services</li>
+                                <li>Built an Index Mapping Analyser (Golang) that automated Elasticsearch optimisation across <strong>100s of ES clusters</strong> at Tokopedia</li>
+                                <li>Designed HLD &amp; LLD and developed backend systems for e-commerce applications — ingestion pipelines, user-facing traffic, and internal APIs</li>
+                                <li>Set up automated canary deployments for Go services, significantly reducing manual post-deployment monitoring effort</li>
+                                <li>Created a Linux System Metrics tool analysing CPU, Disk IO, throughput &amp; memory to recommend cost-effective infrastructure across Go services, ES clusters, Kafka, and PostgreSQL</li>
+                                <li>Led small teams of 4–5 engineers for specific high-impact initiatives</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-content">
+                            <div class="timeline-header">
+                                <h3>Senior Software Engineer 2</h3>
+                                <span class="timeline-company"><img src="resources/fareye_logo.png" alt="FarEye" class="company-logo"> Fareye Logistics</span>
+                                <span class="timeline-date">April 2018 &mdash; March 2021</span>
+                            </div>
+                            <ul class="timeline-list">
+                                <li>Decomposed a monolithic application into event-driven microservices communicating via Kafka, designed and maintained as <strong>sole developer</strong></li>
+                                <li>Architected a highly scalable Node.js real-time tracking platform for Domino's India delivery operations, handling <strong>millions of RPS</strong> — enabling live driver-to-customer visibility across the country and powering data-driven delivery performance incentives for partners nationwide</li>
+                                <li>Contributed to the open-source <strong>Debezium</strong> project by reporting functional and performance issues that improved the tool for the community</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-content">
+                            <div class="timeline-header">
+                                <h3>Software Engineer</h3>
+                                <span class="timeline-company"><img src="resources/kronos_logo.jpeg" alt="Kronos" class="company-logo"> Kronos Incorporated</span>
+                                <span class="timeline-date">May 2015 &mdash; March 2018</span>
+                            </div>
+                            <ul class="timeline-list">
+                                <li>Diagnosed and resolved critical production issues in an enterprise payroll processing application serving large-scale workforce operations</li>
+                                <li>Worked across the full stack with Java, TypeScript, Node.js, Angular, PostgreSQL, and MS SQL</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-content">
+                            <div class="timeline-header">
+                                <h3>B.Tech &mdash; Computer Science & Engineering</h3>
+                                <span class="timeline-company">JSS Academy of Technical Education</span>
+                                <span class="timeline-date">March 2011 &mdash; March 2015 &bull; GPA: 8/10</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
 
-        <section class="leetcode-profile">
+        <!-- Projects Section -->
+        <section id="projects" class="section projects">
             <div class="container">
-                <h2>LeetCode Profile</h2>
-                <p>Username: ankur123rana</p>
-                <p>Link: <a href="https://leetcode.com/ankur123rana" target="_blank" style="color: var(--accent-color);">leetcode.com/ankur123rana</a></p>
+                <h2 class="section-title"><span class="title-number">04.</span> Projects</h2>
+                <div class="projects-grid">
+                    <div class="project-card">
+                        <div class="project-card-header">
+                            <i class="fas fa-folder-open project-icon"></i>
+                            <a href="https://github.com/Ankurrana/es-mapping-analyser" target="_blank" class="project-link" aria-label="View on GitHub"><i class="fab fa-github"></i></a>
+                        </div>
+                        <h3 class="project-title">Elasticsearch Mapping Analyser</h3>
+                        <p class="project-desc">The Elasticsearch Mapping Analyzer (EMA) automates the process of identifying potential optimizations for any Elasticsearch index, based on queries run against that index.</p>
+                        <div class="project-tech">
+                            <span>Elasticsearch</span>
+                            <span>Golang</span>
+                            <span>Performance</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Publications Section -->
+        <section id="publications" class="section publications">
+            <div class="container">
+                <h2 class="section-title"><span class="title-number">05.</span> Publications</h2>
+                <div class="publications-grid">
+                    <a href="https://medium.com/@ankurrana/maximizing-profits-through-efficient-infrastructure-cost-management-98c0b0b0935b" target="_blank" class="publication-card">
+                        <div class="publication-meta">
+                            <span class="publication-platform"><i class="fab fa-medium"></i> Medium</span>
+                            <span class="publication-date">Jun 2023 &bull; 16 min read</span>
+                        </div>
+                        <h3 class="publication-title">Maximizing Profits Through Efficient Infrastructure Cost Management</h3>
+                        <p class="publication-excerpt">A comprehensive guide to optimizing cloud infrastructure costs — covering compute instances, disk strategies, RAM resizing, network optimizations, and execution playbooks for engineers at scale.</p>
+                        <div class="publication-stats">
+                            <span><i class="fas fa-hands-clapping"></i> 4 claps</span>
+                            <span><i class="fas fa-clock"></i> 16 min</span>
+                        </div>
+                    </a>
+                    <a href="https://medium.com/@ankurrana/things-nobody-will-tell-you-setting-up-a-kafka-cluster-3a7a7fd1c92d" target="_blank" class="publication-card">
+                        <div class="publication-meta">
+                            <span class="publication-platform"><i class="fab fa-medium"></i> Medium</span>
+                            <span class="publication-date">Feb 2019 &bull; 4 min read</span>
+                        </div>
+                        <h3 class="publication-title">Things Nobody Will Tell You Setting Up a Kafka Cluster</h3>
+                        <p class="publication-excerpt">Hard-won production lessons on Kafka cluster setup — from vm.swappiness tuning and file descriptor limits to disk IO pitfalls, page cache sizing, GC debugging, and partition strategy.</p>
+                        <div class="publication-stats">
+                            <span><i class="fas fa-hands-clapping"></i> 170 claps</span>
+                            <span><i class="fas fa-clock"></i> 4 min</span>
+                        </div>
+                    </a>
+                </div>
+                <div class="publications-cta">
+                    <a href="https://medium.com/@ankurrana" target="_blank" class="btn btn-outline">View All Articles <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonial Section -->
+        <section id="testimonial" class="section testimonial">
+            <div class="container">
+                <h2 class="section-title"><span class="title-number">06.</span> What My Manager Says</h2>
+                <div class="testimonial-card">
+                    <i class="fas fa-quote-left testimonial-quote-icon"></i>
+                    <blockquote class="testimonial-text">
+                        <p>Ankur has demonstrated immense drive, curiosity and exceptional customer focus delivering great business impact in this cycle.</p>
+                        <p>Since engg re-org in December, Ankur took over the ownership of extensibility overall in particular focusing on Workday ISV enhancements. By tackling several key production issues like JSON parsing, authentication configurations and several others, he helped unblock ESS adoption for several key ESS customers and maintaining customer confidence. He has shown extreme ownership, strong analytical ability and collaboration across teams.</p>
+                        <p>Ankur went over and beyond to timely unblock customers by getting on customer calls even outside regular hours, this showed his immense dedication to his work and ensuring success for ESS as a product. Along the way he helped streamline support channels to ensure our support team is better equipped to help customers and imparting knowledge along the way. This really shows his structured mindset, building processes for scale. He also effectively onboarded new engineers to the project and mentored them to build their own expertise, thus distributing ownership and improving execution velocity.</p>
+                        <p>He has shown commendable maturity and leadership by empowering people around him. This is a key skill to possess as he grows into more senior roles. Going forward, I would like Ankur to maintain the momentum and drive more meaningful impact.</p>
+                    </blockquote>
+                    <div class="testimonial-author">
+                        <span class="testimonial-role">Engineering Manager, Microsoft — ESS Team</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Interests Section -->
+        <section id="interests" class="section interests">
+            <div class="container">
+                <h2 class="section-title"><span class="title-number">07.</span> Interests</h2>
+                <div class="interests-grid">
+                    <div class="interest-item">
+                        <i class="fas fa-robot"></i>
+                        <span>LLMs & AI</span>
+                    </div>
+                    <div class="interest-item">
+                        <a href="https://leetcode.com/u/ankur123rana/" target="_blank" style="text-decoration: none; color: inherit; display: flex; flex-direction: column; align-items: center; gap: inherit;">
+                            <i class="fas fa-code"></i>
+                            <span>LeetCode &bull; 673 Solved &bull; Top 7%</span>
+                        </a>
+                    </div>
+                    <div class="interest-item">
+                        <i class="fas fa-puzzle-piece"></i>
+                        <span>Problem Solving</span>
+                    </div>
+                    <div class="interest-item">
+                        <i class="fas fa-chart-line"></i>
+                        <span>Stock Markets</span>
+                    </div>
+                </div>
             </div>
         </section>
     </main>
-    </main>
 
-    
-    <footer>
+    <!-- Footer / Contact -->
+    <footer id="contact" class="footer">
         <div class="container">
-            <p>Contact me at <a href="mailto:ankursofficial@gmail.com">ankursofficial@gmail.com</a></p>
+            <h2 class="section-title"><span class="title-number">08.</span> Get In Touch</h2>
+            <p class="footer-text">I'm always open to discussing new opportunities, interesting projects, or just connecting over technology.</p>
+            <a href="mailto:ankursofficial@gmail.com" class="btn btn-primary">Say Hello <i class="fas fa-paper-plane"></i></a>
+            <div class="footer-social">
+                <a href="https://linkedin.com/in/iamankurrana" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                <a href="https://medium.com/@ankurrana" target="_blank" aria-label="Medium"><i class="fab fa-medium-m"></i></a>
+                <a href="https://github.com/Ankurrana" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                <a href="https://leetcode.com/ankur123rana" target="_blank" aria-label="LeetCode"><i class="fas fa-code"></i></a>
+            </div>
+            <p class="footer-credit">Designed & Built by Ankur Rana</p>
         </div>
     </footer>
+
+    <script>
+        // Mobile nav toggle
+        const navToggle = document.querySelector('.nav-toggle');
+        const navLinks = document.querySelector('.nav-links');
+        navToggle.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
+
+        // Close mobile nav on link click
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => navLinks.classList.remove('active'));
+        });
+
+        // Navbar scroll effect
+        const navbar = document.querySelector('.navbar');
+        window.addEventListener('scroll', () => {
+            navbar.classList.toggle('scrolled', window.scrollY > 50);
+        });
+
+        // Typing animation
+        const titles = [
+            'Senior Software Engineer @ Microsoft',
+            'System Architect',
+            'Performance Engineer',
+            'AI & LLM Builder',
+            'Distributed Systems Expert'
+        ];
+        const typingText = document.querySelector('.typing-text');
+        let titleIndex = 0;
+        let charIndex = 0;
+        let isDeleting = false;
+
+        function typeEffect() {
+            const current = titles[titleIndex];
+            if (isDeleting) {
+                typingText.textContent = current.substring(0, charIndex--);
+            } else {
+                typingText.textContent = current.substring(0, charIndex++);
+            }
+
+            let delay = isDeleting ? 30 : 60;
+
+            if (!isDeleting && charIndex > current.length) {
+                delay = 2000;
+                isDeleting = true;
+            } else if (isDeleting && charIndex < 0) {
+                isDeleting = false;
+                titleIndex = (titleIndex + 1) % titles.length;
+                delay = 400;
+            }
+            setTimeout(typeEffect, delay);
+        }
+        typeEffect();
+
+        // Animated counters
+        const counterObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const counters = entry.target.querySelectorAll('.metric-number');
+                    counters.forEach(counter => {
+                        const target = +counter.dataset.target;
+                        const duration = 2000;
+                        const start = performance.now();
+
+                        function updateCounter(timestamp) {
+                            const elapsed = timestamp - start;
+                            const progress = Math.min(elapsed / duration, 1);
+                            const eased = 1 - Math.pow(1 - progress, 3);
+                            counter.textContent = Math.floor(eased * target);
+                            if (progress < 1) {
+                                requestAnimationFrame(updateCounter);
+                            } else {
+                                counter.textContent = target;
+                            }
+                        }
+                        requestAnimationFrame(updateCounter);
+                    });
+                    counterObserver.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.3 });
+
+        const metricsSection = document.querySelector('.metrics');
+        if (metricsSection) counterObserver.observe(metricsSection);
+
+        // Scroll-reveal animation
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('revealed');
+                }
+            });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('.section, .timeline-item, .project-card, .skill-category, .interest-item, .testimonial-card, .publication-card, .metric-item').forEach(el => {
+            el.classList.add('reveal');
+            observer.observe(el);
+        });
+    </script>
 </body>
 </html>
