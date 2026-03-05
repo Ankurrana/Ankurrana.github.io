@@ -37,7 +37,7 @@
                 <li><a href="#publications">Publications</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
-            <button class="nav-toggle" aria-label="Toggle navigation">
+            <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
                 <i class="fas fa-bars"></i>
             </button>
         </div>
@@ -413,13 +413,30 @@
         // Mobile nav toggle
         const navToggle = document.querySelector('.nav-toggle');
         const navLinks = document.querySelector('.nav-links');
-        navToggle.addEventListener('click', () => {
-            navLinks.classList.toggle('active');
+        const navIcon = navToggle.querySelector('i');
+        navToggle.addEventListener('click', (e) => {
+            e.stopPropagation();
+            const isOpen = navLinks.classList.toggle('active');
+            navIcon.className = isOpen ? 'fas fa-times' : 'fas fa-bars';
+            navToggle.setAttribute('aria-expanded', isOpen);
         });
 
         // Close mobile nav on link click
         document.querySelectorAll('.nav-links a').forEach(link => {
-            link.addEventListener('click', () => navLinks.classList.remove('active'));
+            link.addEventListener('click', () => {
+                navLinks.classList.remove('active');
+                navIcon.className = 'fas fa-bars';
+                navToggle.setAttribute('aria-expanded', 'false');
+            });
+        });
+
+        // Close mobile nav on outside click
+        document.addEventListener('click', (e) => {
+            if (!navToggle.contains(e.target) && !navLinks.contains(e.target)) {
+                navLinks.classList.remove('active');
+                navIcon.className = 'fas fa-bars';
+                navToggle.setAttribute('aria-expanded', 'false');
+            }
         });
 
         // Navbar scroll effect

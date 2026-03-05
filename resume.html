@@ -192,6 +192,85 @@
             @page { margin: 0.55in 0.6in; }
         }
 
+        /* ---- Mobile responsiveness ---- */
+        @media (max-width: 768px) {
+            body {
+                padding: 24px 20px;
+            }
+
+            .resume-header h1 {
+                font-size: 1.6rem;
+            }
+
+            .resume-header .tagline {
+                font-size: 0.9rem;
+            }
+
+            .contact-row {
+                flex-direction: column;
+                gap: 4px;
+                align-items: center;
+            }
+
+            .job-header {
+                flex-direction: column;
+                gap: 2px;
+            }
+
+            .job-date {
+                white-space: normal;
+            }
+
+            .skills-table .label {
+                width: auto;
+                white-space: normal;
+                display: block;
+                padding-bottom: 2px;
+            }
+
+            .skills-table td {
+                display: block;
+                width: 100%;
+                padding: 2px 0;
+            }
+
+            .skills-table tr {
+                display: block;
+                margin-bottom: 10px;
+            }
+
+            .edu-header {
+                flex-direction: column;
+                gap: 2px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            body {
+                padding: 16px 14px;
+            }
+
+            .resume-header h1 {
+                font-size: 1.4rem;
+            }
+
+            .resume-header .tagline {
+                font-size: 0.82rem;
+            }
+
+            .job-title {
+                font-size: 0.92rem;
+            }
+
+            .job li {
+                font-size: 0.82rem;
+            }
+
+            .summary p {
+                font-size: 0.85rem;
+            }
+        }
+
         /* ---- Screen toolbar ---- */
         .toolbar {
             text-align: center;
