@@ -1,57 +1,91 @@
 {
     "name": "Ankur Rana",
-    "title": "Senior IC Engineer | Design and Architecture of Scalable Systems",
-    "location": "Delhi, India",
+    "title": "Senior Software Engineer | System Architect | Distributed Systems & AI",
+    "location": "Bangalore, India",
+    "phone": "+91 9818012290",
     "email": "ankursofficial@gmail.com",
-    "linkedin": "https://www.linkedin.com/in/iamankurrana",
+    "linkedin": "https://linkedin.com/in/iamankurrana",
+    "github": "https://github.com/Ankurrana",
     "medium": "https://medium.com/@ankurrana",
-    "summary": "Experienced Golang engineer specializing in building scalable, fault-tolerant systems with a focus on optimizing search solutions for e-commerce platforms. Strong interest in exploring new technologies such as web3 and AI language models. Aims to bring leadership and expertise to teams focused on high performance.",
+    "summary": "Senior software engineer and system architect with over 10 years of experience and a proven record optimising and improving performance on large-scale distributed systems. Currently at Microsoft, building AI-powered Copilot Agents leveraging LLMs and Microsoft Copilot Studio. Deep expertise in Golang, TypeScript, and Java, with hands-on experience across Elasticsearch, Kafka, gRPC, Redis, and cloud platforms (GCP, AWS). Passionate about system design, performance engineering, and leveraging AI to accelerate software delivery.",
     "skills": {
-        "programming_languages": ["Golang", "Typescript", "Java"],
-        "technologies": ["Elasticsearch", "gRPC", "Kafka", "Linux", "Node.js", "Nginx", "Redis"],
-        "cloud_platforms": ["GCP", "AWS"],
-        "other": ["Design and Architecture", "Performance Optimization"]
+        "Languages": ["Golang (Go)", "TypeScript", "Java", "JavaScript"],
+        "Backend & Data": ["Elasticsearch", "Apache Kafka", "gRPC", "Redis", "PostgreSQL", "MS SQL", "Node.js", "Nginx"],
+        "Cloud & DevOps": ["Google Cloud Platform (GCP)", "Amazon Web Services (AWS)", "Docker", "Terraform", "CI/CD", "Canary Deployments"],
+        "Architecture": ["Distributed Systems", "Microservices", "Event-Driven Architecture", "System Design (HLD/LLD)", "Performance Optimisation"],
+        "AI & Automation": ["Large Language Models (LLMs)", "Microsoft Copilot Studio", "AI-Assisted Development", "Workflow Automation"],
+        "Leadership": ["Technical Architecture", "Team Leadership", "Mentoring", "Cross-Team Collaboration", "Customer Engagement"]
     },
     "experience": [
         {
-            "title": "Technical Architect",
-            "company": "Goto Group (Gojek - Tokopedia) / ByteDance (TikTok Shop)",
-            "duration": "April 2021 - May 2024",
+            "title": "Senior Software Engineer",
+            "company": "Microsoft — ESS (Employee Self Service) Team, Bangalore",
+            "duration": "October 2025 — Present",
             "achievements": [
-                "Optimized Elasticsearch architecture to reduce latency.",
-                "Developed an Index Mapping Analyzer for Elasticsearch clusters.",
-                "Designed backend systems for e-commerce applications using Golang.",
-                "Implemented automated canary deployments for Golang services.",
-                "Developed a Linux System Metrics analysis tool for infrastructure optimization."
+                "Building ESS, an AI-powered Copilot Agent that streamlines employee interactions with HR and IT systems, serving Microsoft's global workforce of 200,000+ employees",
+                "Took end-to-end ownership of extensibility platform post engineering re-org; resolved critical production blockers that unblocked ESS rollout for multiple strategic enterprise customers, directly maintaining customer confidence and retention",
+                "Designed and implemented natural-language workflows powered by LLMs and Microsoft Copilot Studio, reducing average HR/IT task completion time by replacing multi-step manual processes with conversational interactions",
+                "Improved ESS user experience through UX enhancements that significantly increased user engagement and satisfaction across enterprise deployments",
+                "Led the onboarding of multiple Fortune 500 and multi-million dollar enterprise customers onto the ESS platform, directly contributing to product revenue growth and market expansion",
+                "Streamlined customer support channels and built internal knowledge-sharing processes, reducing support ticket resolution time and enabling the support team to handle issues independently",
+                "Mentored and onboarded new engineers to the project, distributing ownership across 3 additional contributors and improving execution velocity for the broader team",
+                "Proactively joined customer escalation calls outside regular hours, resolving blocking issues within hours and ensuring uninterrupted ESS adoption momentum"
             ],
-            "tech_stack": ["Golang", "Elasticsearch", "Kafka", "Linux", "GCP", "Postgres", "Nginx", "Redis", "Terraform", "gRPC"]
+            "tech_stack": ["TypeScript", "Microsoft Copilot Studio", "LLMs", "REST APIs", "Enterprise Integrations"]
+        },
+        {
+            "title": "Technical Architect",
+            "company": "Goto Group (Gojek · Tokopedia) / ByteDance (TikTok Shop)",
+            "duration": "April 2021 — May 2024",
+            "achievements": [
+                "Optimised search architecture, reducing p99 latency from 210ms to 105ms (50% improvement) by tuning Elasticsearch index mappings, shard strategy, and data distribution",
+                "Reduced memory allocations in hot Go code paths, cutting application CPU usage and GC pause times across high-throughput services",
+                "Built an Index Mapping Analyser (Golang) that automated Elasticsearch configuration optimisation across 100+ ES clusters at Tokopedia",
+                "Designed HLD & LLD and developed backend systems for e-commerce applications — ingestion pipelines, user-facing APIs, and internal services",
+                "Implemented automated canary deployment pipelines for Go services, significantly reducing manual post-deployment monitoring overhead",
+                "Created a Linux System Metrics analysis tool (CPU, Disk IO, throughput, memory) to recommend cost-effective infrastructure across Go services, ES clusters, Kafka, and PostgreSQL",
+                "Led small teams of 4–5 engineers on high-impact initiatives; worked remotely for 2 years during COVID"
+            ],
+            "tech_stack": ["Golang", "Elasticsearch", "Kafka", "gRPC", "PostgreSQL", "Redis", "Nginx", "Terraform", "Linux", "GCP"]
         },
         {
             "title": "Senior Software Engineer 2",
             "company": "Fareye Logistics",
-            "duration": "April 2018 - March 2021",
+            "duration": "April 2018 — March 2021",
             "achievements": [
-                "Decomposed a monolithic application into a microservices architecture.",
-                "Developed a scalable Node.js application for Dominos Delivery Partners.",
-                "Contributed to the Debezium open-source tool by reporting functional and performance issues."
+                "Decomposed a monolithic application into event-driven microservices communicating via Kafka; designed, built, and maintained them as the sole developer",
+                "Architected a highly scalable Node.js real-time tracking platform for Dominos Delivery Partners, handling millions of requests per second — enabling live driver-to-customer visibility and data-driven delivery performance incentives",
+                "Contributed to the open-source Debezium CDC tool by identifying and reporting functional and performance issues, improving the tool for the broader community"
             ],
-            "tech_stack": ["Java", "Node.js", "Kafka", "Typescript", "Nginx", "RDS", "Docker", "AWS"]
+            "tech_stack": ["Java", "Node.js", "TypeScript", "Kafka", "Nginx", "Docker", "Docker Swarm", "RDS", "AWS"]
         },
         {
             "title": "Software Engineer",
-            "company": "Kronos Incorporated",
-            "duration": "May 2015 - March 2018",
+            "company": "Kronos Incorporated (now UKG)",
+            "duration": "May 2015 — March 2018",
             "achievements": [
-                "Solved production issues in a payroll processing application."
+                "Diagnosed and resolved critical production issues in an enterprise payroll processing application serving large-scale workforce operations",
+                "Developed features across the full stack using Java, TypeScript, Node.js, Angular, PostgreSQL, and MS SQL"
             ],
-            "tech_stack": ["Java", "Typescript", "Node.js", "Angular", "Postgres", "MS SQL"]
+            "tech_stack": ["Java", "TypeScript", "Node.js", "Angular", "PostgreSQL", "MS SQL"]
+        }
+    ],
+    "projects": [
+        {
+            "name": "ES Mapping Analyser",
+            "url": "https://github.com/Ankurrana/es-mapping-analyser",
+            "description": "Open-source Golang tool that automates identification of Elasticsearch index optimisations based on query patterns. Deployed across 100+ clusters at Tokopedia to improve search performance at scale."
         }
     ],
     "education": {
-        "degree": "Computer Science and Engineering",
+        "degree": "Bachelor of Technology — Computer Science & Engineering",
         "institution": "JSS Academy of Technical Education",
-        "duration": "March 2011 - March 2015",
-        "gpa": "8/10"
+        "duration": "March 2011 — March 2015",
+        "gpa": "8.0 / 10.0"
     },
-    "interests": ["LLM (Language Models)", "Competitive Coding", "Problem Solving", "Stock Markets"]
+    "interests": ["Large Language Models", "Competitive Programming", "System Design", "Stock Markets"],
+    "profiles": {
+        "LeetCode": "https://leetcode.com/ankur123rana",
+        "Medium": "https://medium.com/@ankurrana"
+    }
 }
